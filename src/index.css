@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+} 
+.box{
+  box-shadow: 0px 0px 40px  ;
+ 
+  height: 100px;
+  background-color: red;
+  width: 100px;
+}
+
+:root {
+  --blue: #2BBEF9;
+  --white: #ffffff;
+  --black: #002F34;
+}
+
+@media (max-width: 500px) {
+  #categoryContainer{
+    overflow-x: scroll;
+    margin: 5px 0px;
+    flex-wrap: nowrap;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+#scrollBar::-webkit-scrollbar{
+  width: 20px;
+}
+#scrollBar::-webkit-scrollbar-thumb{
+  background: rgb(181, 180, 180);
+  
+
+}
+#scrollBar::-webkit-scrollbar-track{
+  background-color: whitesmoke;
+  width: 30px;
+
+}
+#boxShadow{
+ box-shadow: 0px 3px 5px #80cbe8;
+
+
+}
