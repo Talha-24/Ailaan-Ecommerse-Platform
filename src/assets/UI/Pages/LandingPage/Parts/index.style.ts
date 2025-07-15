@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Product = styled.div<{ isproduct?: boolean, product?: boolean, relatedads?: boolean }>`
+export const Product = styled.div<{ product?: boolean, relatedads?: boolean }>`
 width:${propse => propse.relatedads ? `230px` : propse.product ? `211px` : `290px`};
 height:  ${propse => propse.product ? `fit-content` : `fit-content`};
 background-color: white;

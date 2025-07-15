@@ -7,7 +7,7 @@ const Profilefeatures = () => {
         <ProfileContainer profile={false}>
             <ProfileIcon src={messageIcon}></ProfileIcon>
             <ProfileIcon src={bellIcon}></ProfileIcon>
-            <ProfileContainer profile>
+            <ProfileContainer profile={true}>
                 <Headerprofile />
             </ProfileContainer>
         </ProfileContainer>

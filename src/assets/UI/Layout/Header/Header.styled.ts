@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-export const MyWrapper=styled.div`
+export const MyWrapper = styled.div`
 width: 100%;
 background-color: #FCFCFC;
 `
@@ -28,7 +28,7 @@ height: 70px;
 }
 
 `
-export const Button = styled.button<{ black: boolean,}>`
+export const Button = styled.button<{ black?: boolean, }>`
 color:  white;
 background-color:${(propse) => propse.black ? "#333333" : "var(--blue)"};
 font-weight: 400;
@@ -45,7 +45,7 @@ border-radius: 30px;
   height: 50px;
 }
 `
-export const search = styled.img`
+export const search = styled.svg`
 height: 50px;
 width: 80px;
 background-color: yellow;
@@ -75,7 +75,7 @@ height: 48%;
 width: fit-content;
 }
 `
-export const SearchInput = styled.div<{isShow?:boolean}>`
+export const SearchInput = styled.div<{ isShow?: boolean }>`
 display: flex;
 align-items: center;
 width: 100%;
@@ -83,7 +83,7 @@ border: 2px solid var(--blue);
 background-color: white;
 border-radius: 100px;
 position: relative;
-@media (${propse=>propse.isShow ? "min" : "max"}-width: 1200px){
+@media (${propse => propse.isShow ? "min" : "max"}-width: 1200px){
 display: none;
 }
 `
@@ -104,23 +104,15 @@ height: 45px;
 width: 30px;
 }
 `
-// <div className="flex gap-[18px] w-[160px] items-center max-[1200px]:min-w-fit">
-// <div className=" flex items-center gap-[5px] ">
-
-export const ProfileContainer = styled.div<{ profile: boolean }>`
+export const ProfileContainer = styled.div<{ profile?:boolean }>`
  display: flex;
  gap: ${(propse) => propse.profile ? "5px" : "18px"};
  width: ${(propse) => propse.profile ? "" : "160px"};
  align-items: center;
  ${propse => propse.profile ? "" : `@media (max-width: 1200px){
     min-width:  fit-content;
- }
-      
-    `}
- 
-`
-export const ProfilePictureCont = styled.div`
-`
+}`}`
+
 export const ButtonContainer = styled.div`
 display: flex;
 gap: 10px;
@@ -142,6 +134,7 @@ width: 60%;
 color: #333333;
 font-family: Poppins;
 font-size: 17px;
+font-weight:400;
 margin-left: 20px;
 `
 

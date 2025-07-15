@@ -1,11 +1,27 @@
-import React from 'react'
-
-const main-categories = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+import React, { useState } from 'react'
+import { categoryData } from '../../../../Data/Data'
+import arrowRight from "../parts/arrowRight (2).svg"
+const MainCategories: React.FC = () => {
+    const [showCategory, setSubCategory] = useState<boolean>(true);
+    return (
+        <div className='flex justify-between flex-col gap-2  h-full max-[500px]:w-full max-[1000px]:w-full'>
+            {categoryData.map(function (val, index) {
+                return (
+                    <div onMouseOver={() => setSubCategory(true)} key={index} className='flex items-center justify-between w-[360px] max-[1240px]:w-full bg-white shadow-2xl shadow-gray-500 hover:bg-[#EFEFFD] py-2 max-[500px]:py-[6px] px-4 rounded-xl'>
+                        <div className='flex items-center gap-5'>
+                            <div className='h-13 w-13 max-[500px]:h-10 max-[500px]:w-10'>
+                                <img className='h-full w-full rounded-full' src={val.icon} alt="" />
+                            </div>
+                            <p className='text-[17px] text-[#000000] font-[400]'>{val.name}</p>
+                        </div>
+                        <div>
+                            <img className='h-[15px]' src={arrowRight} alt="" />
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    )
 }
 
-export default main-categories
+export default MainCategories
